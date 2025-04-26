@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.background {
+    background-color: rgb(6, 26, 85);
+}
+
+.logo {
+    color: rgb(255, 5, 5);
+    font-family: "Lobster";
+    font-size: 50px;
+    margin-right: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    gap: 30px;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+.middle {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 5, 5);
+}
+
+img {
+    width: 60px;
+}
+
+.lobster-regular {
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+    border-radius: 10px;
+    width: 600px;
+    margin-top: 300px;
+    margin: auto;
+}
+
+body {
+    background-image: url('flygplan.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+  }
+
+  .spacer {
+    min-height: 100px;
+  }
+
+.slogan {
+    color: aliceblue;
+    padding-top: 300px;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px #000000;
+}
+#codeInput {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px 20px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  #codeInput:focus {
+    border-color: #0077ff;
+    box-shadow: 0 0 8px rgba(0, 119, 255, 0.2);
+  }
+  #codeInput::placeholder {
+    color: #6c6b6d;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0.8;
+  }
+
+ #bekrefta {
+    font-family: Arial black, Helvetica, sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    color: white;
+    background-color:#FF0505;
+    background: linear-gradient(to left, #00376b, #b4b3b8)
+ }
+
+ #error {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FF0505;
+    font-weight: bold;
+
+ }
+
+ #welcomeMessage {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+ }
