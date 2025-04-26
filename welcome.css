@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+@keyframes crazyBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  body {
+    min-height: 100vh;
+    background: linear-gradient(270deg, #ff4b2b, #ff416c, #00c3ff, #ffff1c);
+    background-size: 800% 800%;
+    animation: crazyBackground 10s ease infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  /* Welcome Message (h1) bounce and scale */
+  @keyframes bounceInCrazy {
+    0% {
+      transform: scale(0.3) rotate(-20deg);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.2) rotate(10deg);
+      opacity: 1;
+    }
+    70% {
+      transform: scale(0.9) rotate(-5deg);
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+    }
+  }
+  
+  #welcomeMessage {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    animation: bounceInCrazy 1.5s ease;
+    margin-bottom: 40px;
+  }
+  
+  /* Crazy glowing button */
+  @keyframes pulseGlow {
+    0% {
+      box-shadow: 0 0 5px #ff416c, 0 0 10px #ff416c, 0 0 20px #ff416c;
+    }
+    50% {
+      box-shadow: 0 0 20px #ff416c, 0 0 30px #ff416c, 0 0 50px #ff416c;
+    }
+    100% {
+      box-shadow: 0 0 5px #ff416c, 0 0 10px #ff416c, 0 0 20px #ff416c;
+    }
+  }
+  
+  #continueButton {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background: #ff416c;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    animation: pulseGlow 2s infinite;
+    transition: transform 0.3s;
+  }
+  
+  #continueButton:hover {
+    transform: scale(1.1);
+    background: #00c3ff;
+  }
+  
+  
