@@ -115,7 +115,7 @@ body {
     width: 200px;
     height: 50px;
     color: white;
-    background: linear-gradient(to left, #00376b, #b4b3b8)
+    background: linear-gradient(to left, #00376b, #b4b3b8);
  }
  #bekrefta:hover {
     background: linear-gradient(to left, #FF0505, #00376b);
