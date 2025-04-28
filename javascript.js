@@ -29,15 +29,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
         const userName = localStorage.getItem('userName');
         if (userName) {
-        welcomeMessage.textContent = `Välkommen ${userName}!`;
-        const jsConfetti = new JSConfetti();
-        jsConfetti.addConfetti({ emojis: ['🎉', '✨', '💥', '🔥', '🤯']
-            
-        });
+        welcomeMessage.textContent = `Incheckad som ${userName}!`;
 
-
-    }    }
-});
+        }
+    }
+})
 
 function goToNextPage() {
         window.location.href = 'destination.html';
