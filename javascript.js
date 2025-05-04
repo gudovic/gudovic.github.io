@@ -35,8 +35,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 })
 
-function goToNextPage() {
-        window.location.href = 'destination.html';
+function goToNextPage(url) {
+        window.location.href = url;
     }
 
     const groupContent = {
@@ -73,7 +73,7 @@ function goToNextPage() {
             ]
         },
         group5: {
-            headline: "Safari i Kenya",
+            headline: "Safari i Afrika",
             images: ["safari1.jpg", "safari2.jpg"],
             texts: [
                 "Giraff, lejon och tiger, håll i hatten!",
@@ -105,4 +105,6 @@ function goToNextPage() {
             window.location.href = 'welcome.html';
         }
     });
+    
+
     
