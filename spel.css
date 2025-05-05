@@ -5,7 +5,7 @@ body {
 
 #game-boarder {
     height: 300px;
-    width: 600px;
+    width: 800px;
     border-color: black;
     border-width: 10px;
     border-style: solid;
@@ -17,8 +17,10 @@ body {
     position: relative;
     background-color: red;
     top: 225px;
-    animation-name: hopp;
-    animation-duration: 1s;
+}
+
+.hopp {
+    animation: hopp 0.5s;
 }
 
 #sten {
@@ -28,18 +30,17 @@ body {
     background-color: black;
     top: 175px;
     left: 550px;
-    animation-name: sten;
-    animation-duration: 2s;
-    animation-iteration-count: infinite}
+    animation: sten 1s infinite linear;
+}
 
 @keyframes sten {
-    0% {left: 550px;}
+    0% {left: 750px;}
     100% {left: -100px;}
 }
 
 @keyframes hopp {
     0% {top: 225px;}
-    50% {top: 50px;}
-    80% {top: 50px;}
-    100% {top: 255px;}
+    30% {top: 50px;}
+    70% {top: 50px;}
+    100% {top: 225px;}
     }
