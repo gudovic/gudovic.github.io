@@ -44,16 +44,16 @@ function goToNextPage(url) {
             headline: "Afterski i Alperna!",
             images: ["alperna1.jpg", "alperna2.jpg"],
             texts: [
-                "En fantastisk plats med klippiga berg och skippiga ööl",
-                "More info about what you'll find here."
+                "Putsa dina googles, på med mössan och understället",
+                "Se upp i backen tusen hål i nacken"
             ]
         },
         group2: {
             headline: "Golfresa Marbella",
             images: ["golf1.jpg", "golf2.jpg"],
             texts: [
-                "Putta och öla",
-                "Swinga höger och vänster"
+                "Glöm inte kepsen och handsken samt din bästa klubba.",
+                "Putta och öla - Swinga höger och vänster"
             ]
         },
         group3: {

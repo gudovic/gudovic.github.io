@@ -35,9 +35,8 @@ header {
 .group-section .image-container {
     width: 45%;
     height: 100%;
-    background-size: cover;
     border-radius: 10px;
-    object-fit: cover;
+    object-fit:contain;
 }
 
 .group-section .text-container {
@@ -46,13 +45,19 @@ header {
     line-height: 1.6;
     text-align: left;
     padding: 20px;
-    object-fit: cover;
+    object-fit: contain;
+}
+
+.text-container {
+    margin-left: 140px;
+    color: #FF0505;
+    align-content: center;
 }
 
 button {
     font-size: 1.2rem;
     padding: 10px 20px;
-    background-color: #ff416c;
+    background-color: #FF0505;
     color: white;
     border: none;
     border-radius: 10px;
@@ -61,11 +66,29 @@ button {
 }
 
 button:hover {
-    background-color: #ff4b2b;
+    background-color: #830d0d;
 }
+
+#continueButton {
+    margin-left: 50%;
+}
+
 
 #groupHeadline {
-    color: rgb(255, 5, 5);
-    
-}
-
+        font-size: 4rem;
+        margin: 0;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: 2px 2px 6px rgba(122, 5, 5, 0.7);
+        animation: waveText 5s infinite ease-in-out;
+        color: #FF0505;
+      }
+      
+      @keyframes waveText {
+        0%, 100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
