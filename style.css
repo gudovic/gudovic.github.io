@@ -159,9 +159,10 @@ body {
   height: 400px;
 }
 
-.varor {
+
+.varor { 
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 2.5rem; 
 }
 
 .leveranstid {
@@ -170,6 +171,7 @@ body {
 
 .beskrivning {
   font-style: italic;
+  font-size: 18px;
 }
 
 .knapp {
@@ -183,4 +185,25 @@ body {
 
 .knapp:hover {
   cursor: not-allowed;
+}
+
+.kontakt1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  color: #ffffff;
+  padding: 200px;
+}
+
+.tillbaka {
+  font-size: 50px;
+  border: 3px red solid;
+  border-radius: 10px;
+  background-color: #ACD4FD
+}
+
+#socket {
+  width: 600px;
+  height: 300px;
+  padding: 100px;
 }

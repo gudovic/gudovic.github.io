@@ -17,13 +17,22 @@ document.addEventListener('keydown', function(event){
 }); 
 
 setInterval(() => {
+    score.innerText++;
     const bilTop = parseInt(window.getComputedStyle(bil)
-    .getPropertyValue("top"));
-    console.log(bilTop)
+    .getPropertyValue('top'));
+    const stenLeft = parseInt(window.getComputedStyle(sten)
+    .getPropertyValue('left'));
+
+    if (stenLeft < 0) {
+        sten.style.display = 'none';
+    } else {
+        sten.style.display = '';
+    }
+
+    if (stenLeft < 50 && stenLeft > 0 && bilTop > 150 ) {
+       // alert('game over');
+    }
+
 }, 50);
 
-setInterval(() => {
-    const stenTop = parseInt(window.getComputedStyle(sten)
-    .getPropertyPriority("top"));
-    console.log(stenTop);
-}, 50);
+
