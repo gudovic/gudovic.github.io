@@ -1,10 +1,12 @@
 const validCodes = {
     '1234': { userName: 'Max Mattiasson', userGroup: 'group1' },
-    '5678': { userName: 'Bullen', userGroup: 'group2' },
+    '5678': { userName: 'Lucas Backe', userGroup: 'group2' },
     '1113': { userName: 'Alex Thoresson', userGroup: 'group3' },
     '1114': { userName: 'Emilie Sjunnesson Zackrisson', userGroup: 'group4' },
     '1115': { userName: 'Emma L', userGroup: 'group5' },
     '1116': { userName: 'Håkan', userGroup: 'group6' },
+    '1117': { userName: 'Marre', userGroup: 'group7' },
+
 
 }
 
@@ -81,11 +83,19 @@ function goToNextPage(url) {
             ]
         },
         group6: {
-            headline: "Yogaretreat Malaysia",
+            headline: "Meditationsläger Malaysia",
             images: ["yoga1.jpg", "yoga2.jpg"],
             texts: [
                 "Sträck ut dig ordentligt",
                 "Kumbaya"
+            ]
+        },
+        group7: {
+            headline: "Countryfestival Texas",
+            images: ["texas1.jpg", "texas2.jpg"],
+            texts: [
+                "galopp galopp",
+                "yeeeee haaaawww"
             ]
         }
     };
