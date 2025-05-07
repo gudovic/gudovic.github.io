@@ -101,6 +101,7 @@ function goToNextPage(url) {
     };
 
     document.addEventListener('DOMContentLoaded', function() {
+        if (window.location.pathname.includes('destination.html')) {
         const userGroup = localStorage.getItem('userGroup');
     
         if (userGroup && groupContent[userGroup]) {
@@ -114,6 +115,7 @@ function goToNextPage(url) {
         } else {
             window.location.href = 'index.html';
         }
+    }
     });
     
 
