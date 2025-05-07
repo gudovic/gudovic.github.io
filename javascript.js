@@ -1,8 +1,8 @@
 const validCodes = {
-    '1234': { userName: 'Max Mattiasson', userGroup: 'group1' },
-    '5678': { userName: 'Lucas Backe', userGroup: 'group2' },
-    '1113': { userName: 'Alex Thoresson', userGroup: 'group3' },
-    '1114': { userName: 'Emilie Sjunnesson Zackrisson', userGroup: 'group4' },
+    '1234': { userName: 'Max', userGroup: 'group1' },
+    '5678': { userName: 'Lucas', userGroup: 'group2' },
+    '1113': { userName: 'Alex', userGroup: 'group3' },
+    '1114': { userName: 'Emilie', userGroup: 'group4' },
     '1115': { userName: 'Emma L', userGroup: 'group5' },
     '1116': { userName: 'Håkan', userGroup: 'group6' },
     '1117': { userName: 'Marre', userGroup: 'group7' },
@@ -112,7 +112,7 @@ function goToNextPage(url) {
             document.getElementById('image2').innerHTML = `<img src="${content.images[1]}" alt="Second image">`;
             document.getElementById('text2').textContent = content.texts[1];
         } else {
-            window.location.href = 'welcome.html';
+            window.location.href = 'index.html';
         }
     });
     

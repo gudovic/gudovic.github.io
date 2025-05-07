@@ -30,7 +30,7 @@ setInterval(() => {
     }
 
     if (stenLeft < 50 && stenLeft > 0 && bilTop > 150 ) {
-       // alert('game over');
+     //  alert('game over');
     }
 
 }, 50);
