@@ -4,11 +4,10 @@ body {
 }
 
 #game-boarder {
+    position: relative;
     height: 300px;
     width: 800px;
-    border-color: black;
-    border-width: 10px;
-    border-style: solid;
+    border: 10px solid black;
 }
 
 #bil {
@@ -45,4 +44,39 @@ body {
     100% {top: 225px;}
     }
 
+@keyframes skjut {
+        0% { left: 80px; }
+        100% { left: 800px; }
+}
 
+#skott {
+    height: 30px;
+    width: 30px;
+    background-color: yellow;
+    position: absolute;
+    top: 240px;
+    left: 80px;
+    display: none;
+}
+
+.skjut {
+    display: block;
+    animation: skjut 0.5s linear; 
+}
+
+#cooldown-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: 10px;
+    background-color: #ddd;
+    display: none;
+}
+
+#cooldown-bar {
+    height: 100%;
+    background-color: #ff0000; /* Red color for the cooldown bar */
+    width: 100%; /* Starts full */
+    transition: width 3s linear; /* Smoothly animate width */
+}
