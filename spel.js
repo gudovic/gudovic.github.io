@@ -1,6 +1,48 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAbpqrS7En7shMkdfHHtW6bOPQsN6Iq2yY",
+  authDomain: "lf-airlines.firebaseapp.com",
+  databaseURL: "https://lf-airlines-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "lf-airlines",
+  storageBucket: "lf-airlines.appspot.com",
+  messagingSenderId: "719527670719",
+  appId: "1:719527670719:web:a3cdc391b0858a8a72a70a"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+const scoresRef = ref(db, "scores");
+
+function submitScore(name, score) {
+  push(scoresRef, { name, score });
+}
+
+let gameRunning = false;
+// TESTA HÄÄÄÄRR
+onValue(scoresRef, (snapshot) => {
+    const data = snapshot.val();
+    const sorted = Object.values(data || {}).sort((a, b) => b.score - a.score).slice(0, 10);
+  
+    const leaderboard = document.getElementById("leaderboard");
+    leaderboard.innerHTML = '';
+  
+    sorted.forEach(entry => {
+      const li = document.createElement("li");
+      li.textContent = `${entry.name}: ${entry.score}`;
+      leaderboard.appendChild(li);
+    });
+  });
+//AHSJDSDKFDG 
+document.getElementById("start-button").addEventListener("click", () => {
+    gameRunning = true;
+    document.getElementById("start-screen").style.display = "none";
+  });
+
 const bil = document.getElementById('bil');
 const sten = document.getElementById('sten');
-const puntos = document.getElementById('puntos');
+const score = document.getElementById('score');
 const skott = document.getElementById('skott');
 const cooldownBar = document.getElementById('cooldown-bar');
 const cooldownContainer = document.getElementById('cooldown-container');
@@ -60,8 +102,9 @@ document.addEventListener('keydown', function(event) {
 });
 
 // Game loop (every 20ms)
-setInterval(() => {
-    // Update score (for now we just increment it for simplicity)
+let gameInterval = setInterval(() => {
+    if (!gameRunning) return;
+  
     score.innerText++;
 
     const bilTop = parseInt(window.getComputedStyle(bil).getPropertyValue('top'));
@@ -69,27 +112,75 @@ setInterval(() => {
     const skottActive = skott.classList.contains('skjut');
     let skottLeft = 0;
 
-    // Only calculate skottLeft if shot is active
     if (skottActive) {
         skottLeft = parseInt(window.getComputedStyle(skott).getPropertyValue('left'));
     }
-
-    // Handle stone logic (hide if off-screen)
-    if (stenLeft < 0) {
-        sten.style.display = 'none';
-    } else {
-        sten.style.display = ''; // Reset visibility
+    if (skottActive) {
+        skottLeft = skott.getBoundingClientRect().left;
+    }
+    
+    const stenBox = sten.getBoundingClientRect();
+    const skottBox = skott.getBoundingClientRect();
+    
+    // Check if projectile overlaps the stone
+    const isHit = (
+        skottBox.right > stenBox.left &&
+        skottBox.left < stenBox.right &&
+        skottBox.top < stenBox.bottom &&
+        skottBox.bottom > stenBox.top
+    );
+    
+    if (isHit) {
+        sten.style.animation = 'none';
+        sten.offsetHeight; // Force browser to reset animation
+        sten.style.animation = 'sten 1s infinite linear';
     }
 
-    // Handle collision detection (if shot collides with stone)
-    if (skottActive && Math.abs(stenLeft - skottLeft) < 30) {
-        sten.style.display = 'none'; // Hide stone if shot hits it
+    if (stenLeft < 80 && stenLeft > -30 && bilTop > 160) {
+        console.log("Collision detected"); // ← debug log
+
+        const finalScore = parseInt(score.innerText);
+        document.getElementById('final-score').innerText = `Din poäng: ${finalScore}`;
+        document.getElementById('game-over-screen').style.display = 'flex';
+        clearInterval(gameInterval);
+
+        document.getElementById('final-score').innerText = `Din poäng: ${finalScore}`;
+        document.getElementById('game-over-screen').style.display = 'flex';
+
+        clearInterval(gameInterval); // ✅ Stop the loop!
     }
 
-    // Game over check (if stone hits the car)
-    if (stenLeft < 50 && stenLeft > 0 && bilTop > 150) {
-        // Trigger Game Over (e.g., stop the game or show a message)
-       // alert('Game Over');
-    }
+    // other game logic...
+}, 20);
 
-}, 20); // Set interval for game loop (20ms for smooth updates)
+
+document.addEventListener("DOMContentLoaded", () => {
+    const submitButton = document.getElementById("submit-button");
+
+    const playAgainButton = document.getElementById("play-again-button");
+    playAgainButton.addEventListener("click", () => {
+      location.reload();
+    });
+  
+    submitButton.addEventListener("click", () => {
+      const nameInput = document.getElementById("player-name");
+      const name = nameInput.value.trim();
+      const finalScore = parseInt(score.innerText);
+  
+      if (!name) {
+        alert("Skriv ditt namn först!");
+        return;
+      }
+      
+      submitScore(name, finalScore);
+      nameInput.disabled = true;
+  
+      submitButton.innerText = "Score Saved!";
+      submitButton.disabled = true;
+  
+      setTimeout(() => {
+        location.reload();
+      }, 100);
+    });
+  });
+  

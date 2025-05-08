@@ -215,3 +215,54 @@ body {
   padding: 40px;
 }
 
+.osshead {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.osstext {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .header a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #codeInput {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+
+  #bekrefta {
+    width: 90%;
+  }
+
+  .slogan {
+    font-size: 1.2rem;
+    padding: 1rem;
+    text-align: center;
+  }
+}

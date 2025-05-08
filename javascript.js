@@ -1,11 +1,11 @@
 const validCodes = {
     '1234': { userName: 'Max', userGroup: 'group1' },
-    '1113': { userName: 'Alex', userGroup: 'group3' },
-    '1114': { userName: 'Emilie', userGroup: 'group4' },
-    '1116': { userName: 'Håkan', userGroup: 'group5' },
-    '1117': { userName: 'Edvin', userGroup: 'group5'},
-    '1118': { userName: 'Lukas', userGroup: 'group5'},
-    '1119': { userName: 'Magnus', userGroup: 'group5'},
+    '1112': { userName: 'Alex', userGroup: 'group2' },
+    '1113': { userName: 'Emilie', userGroup: 'group3' },
+    '1114': { userName: 'Håkan', userGroup: 'group4' },
+    '1115': { userName: 'Edvin', userGroup: 'group5'},
+    '1116': { userName: 'Lukas', userGroup: 'group6'},
+    '1117': { userName: 'Magnus', userGroup: 'group7'},
     '108212': { userName: 'Fredrik E', userGroup: 'group4'},
     '102755': { userName: 'Lisa I', userGroup: 'group4'},
     '101230': { userName: 'Erika H', userGroup: 'group4'},
@@ -49,7 +49,20 @@ const validCodes = {
     '100420': { userName: 'Anna E', userGroup: 'group6'},
     '105886': { userName: 'Gustav N', userGroup: 'group6'},
     '107211': { userName: 'Stefan S', userGroup: 'group6'},
+    '102633': { userName: 'Anna L', userGroup: 'group2'},
+    '100912': { userName: 'Filip B', userGroup: 'group2'},
+    '102450': { userName: 'Tommy M', userGroup: 'group2'},
+    '101426': { userName: 'Lena G', userGroup: 'group2'},
+    '100481': { userName: 'Katia S', userGroup: 'group2'},
+    '100865': { userName: 'Lucas B', userGroup: 'group2'},
+    '102816': { userName: 'Linda L', userGroup: 'group2'},
+    '102389': { userName: 'Henrik E', userGroup: 'group2'},
     '131313': { userName: 'Jenny S', userGroup: 'group4'},
+    '176241': { userName: 'John F', userGroup: 'group5'},
+    '191541': { userName: 'Anna-Lena S', userGroup: 'group5'},
+    '191345': { userName: 'Pär J', userGroup: 'group5'},
+    '191556': { userName: 'Martin E', userGroup: 'group5'},
+    '191629': { userName: 'Martina L', userGroup: 'group5'},
 }
 
 const codeInput = document.getElementById('codeInput');
@@ -96,7 +109,7 @@ function goToNextPage(url) {
             headline: "Golfresa till Marbella",
             images: ["golf1.jpg", "golf2.jpg"],
             texts: [
-                "Glöm inte kepsen och handsken samt din bästa klubba.",
+                "Där solbrännan matchar pikén och varje sving sitter som en smäck",
                 "Hole in one beer in two"
             ]
         },
@@ -104,7 +117,7 @@ function goToNextPage(url) {
             headline: "Pokerhelg i Vegas",
             images: ["vegas1.jpg", "vegas2.jpg"],
             texts: [
-                "Rökfylld lounge och höga insatser",
+                "Där natten aldrig tar slut och stilen är lika vass som spelet",
                 "All in"
             ]
         },
@@ -112,15 +125,15 @@ function goToNextPage(url) {
             headline: "Solsemester i Hawaii ",
             images: ["hawaii1.jpg", "hawaii2.jpg"],
             texts: [
-                "Varm å skönt hulahula",
-                "bingibongo"
+                "Gyllene stränder, surfvågor och magiska solnedgångar",
+                "Blommor, värme och hula hula"
             ]
         },
         group5: {
-            headline: "Safari i Afrika",
+            headline: "Safari i Kenya",
             images: ["safari1.jpg", "safari2.jpg"],
             texts: [
-                "Giraff, lejon och tiger, håll i hatten på och på med västen!",
+                "Håll i hatten, fram med kikaren och på med västen!",
                 "Härligt härligt men farligt farligt"
             ]
         },
@@ -128,16 +141,16 @@ function goToNextPage(url) {
             headline: "Rockfestival i Kalifornien",
             images: ["rock1.jpg", "rock2.jpg"],
             texts: [
-                "Hell yeah!",
-                "Nitar, läder och ett jävlar anamma"
+                "Solen steker och lädret svettas, sand mellan tårna och nävarna i luften",
+                "Svarta jeans som sett fler spelningar än tvättmaskiner"
             ]
         },
         group7: {
             headline: "Countryfestival i Texas",
             images: ["texas1.jpg", "texas2.jpg"],
             texts: [
-                "galopp galopp",
-                "yeeeee haaaawww"
+                "Sadeldoft, dammiga jeans och hästkraft på riktigt, här rider du in som en cowboy och dansar ut som en legend.",
+                "Yeeeee haaaaww!"
             ]
         }
     };

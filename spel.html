@@ -1,23 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spel</title>
-    <link rel="stylesheet" href="spel.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spel</title>
+  <link rel="stylesheet" href="spel.css" />
 </head>
 <body>
+  <div id="game-boarder">
+    <div id="bil"></div>
+    <div id="sten"></div>
+    <div id="skott"></div>
+  </div>
 
-    <div id="game-boarder">
-        <div id="bil"></div>
-        <div id="sten"></div>
-        <div id="skott"></div>
+  <div id="cooldown-container">
+    <div id="cooldown-bar"></div>
+  </div>
+
+  <div id="start-screen">
+    <button id="start-button">Starta spelet</button>
+  </div>
+  <h1 id="score">0</h1>
+
+  <div id="game-over-screen" style="display: none;">
+    <div class="game-over-box">
+      <h2>Bra försök!</h2>
+      <p id="final-score">Din poäng: 0</p>
+      <input type="text" id="player-name" placeholder="Enter your name" />
+      <button id="submit-button">In på topplistan</button>
+      <button id="play-again-button">Spela igen</button>
     </div>
+  </div>
 
-    <div id="cooldown-container">
-        <div id="cooldown-bar"></div>
-</div>
-<h1 id="score">0</h1>
-    <script src="spel.js"></script>
+  <div id="leaderboard-box">
+    <h2>Topp 10</h2>
+    <ul id="leaderboard"></ul>
+  </div>
+
+  <!-- Firebase + spel.js -->
+  <script type="module" src="spel.js"></script>
 </body>
 </html>
