@@ -82,7 +82,7 @@ body {
 
 .slogan {
     color: aliceblue;
-    padding-top: 300px;
+    padding-top: 200px;
     font-size: 50px;
     text-shadow: 2px 2px 4px #000000;
 }
@@ -265,4 +265,14 @@ body {
     padding: 1rem;
     text-align: center;
   }
+}
+
+#tillgame {
+  border: #000000 3px solid;
+  background-color: #bbbbbb;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  border-radius: 30px;
+  padding: 20px;
+  color:#00376b;
 }
