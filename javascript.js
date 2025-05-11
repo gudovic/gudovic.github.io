@@ -63,6 +63,17 @@ const validCodes = {
     '191345': { userName: 'Pär J', userGroup: 'group5'},
     '191556': { userName: 'Martin E', userGroup: 'group5'},
     '191629': { userName: 'Martina L', userGroup: 'group5'},
+    '192254': { userName: 'Camilla S', userGroup: 'group2'},
+    '192243': { userName: 'Hannah E', userGroup: 'group4'},
+    '192345': { userName: 'Kerstin J', userGroup: 'group3'},
+    '192358': { userName: 'Christoffer B', userGroup: 'group7'},
+    '192367': { userName: 'Ulrika S', userGroup: 'group1'},
+    '192372': { userName: 'Linda N', userGroup: 'group1'},
+    '192482': { userName: 'Olivia Y', userGroup: 'group6'},
+    '192496': { userName: 'Emma B', userGroup: 'group5'},
+    '192566': { userName: 'Sookhee K', userGroup: 'group5'},
+    '192788': { userName: 'Isabelle P', userGroup: 'group5'},
+    '192792': { userName: 'Marina H', userGroup: 'group5'},
 }
 
 const codeInput = document.getElementById('codeInput');
