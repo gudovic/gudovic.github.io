@@ -7,7 +7,9 @@
   <link rel="stylesheet" href="spel.css" />
 </head>
 <body>
+   <h1 id="score">0</h1>
   <div id="game-boarder">
+    <p id="tutorial">Hoppa : Alla knappar <br> Skjut : Spacebar (3 sekunders omladdning)</p>
     <div id="bil"></div>
     <div id="sten"></div>
     <div id="skott"></div>
@@ -15,19 +17,20 @@
 
   <div id="cooldown-container">
     <div id="cooldown-bar"></div>
+    <div id="laddarom">Laddar!</div>
   </div>
 
   <div id="start-screen">
     <button id="start-button">Starta spelet</button>
   </div>
-  <h1 id="score">0</h1>
+ 
 
   <div id="game-over-screen" style="display: none;">
     <div class="game-over-box">
       <h2>Bra försök!</h2>
       <p id="final-score">Din poäng: 0</p>
       <input type="text" id="player-name" placeholder="Skriv ditt namn" />
-      <button id="submit-button">In på topplistan</button>
+      <button id="submit-button">Spara poäng på topplistan</button>
       <button id="play-again-button">Spela igen</button>
     </div>
   </div>

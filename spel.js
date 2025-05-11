@@ -20,6 +20,7 @@ function submitScore(name, score) {
 }
 
 let gameRunning = false;
+
 // TESTA HÄÄÄÄRR
 onValue(scoresRef, (snapshot) => {
     const data = snapshot.val();
@@ -38,7 +39,11 @@ onValue(scoresRef, (snapshot) => {
 document.getElementById("start-button").addEventListener("click", () => {
     gameRunning = true;
     document.getElementById("start-screen").style.display = "none";
-  });
+    
+    // Start sten animation
+    sten.style.animation = "sten 1s infinite linear";
+});
+
 
 const bil = document.getElementById('bil');
 const sten = document.getElementById('sten');
@@ -70,9 +75,16 @@ function skjut() {
     // Add shooting animation class
     skott.classList.add('skjut');
 
-    // Show the cooldown bar and start animating the width to 0%
-    cooldownContainer.style.display = 'block';
-    cooldownBar.style.width = '100%';
+cooldownContainer.style.display = 'block';
+cooldownBar.style.transition = 'none';         // Reset any old transition
+cooldownBar.style.width = '100%';              // Instantly fill the bar
+
+// Let the browser render this change first
+requestAnimationFrame(() => {
+    cooldownBar.style.transition = 'width 3s linear'; // Smooth shrink
+    cooldownBar.style.width = '0%';                   // Animate shrink to 0%
+});
+
 
     // After 0.5 seconds (shot animation), reset the shot and hide it
     setTimeout(() => {
@@ -84,13 +96,14 @@ function skjut() {
     setTimeout(() => {
         canShoot = true; // Re-enable shooting after cooldown
         cooldownBar.style.width = '0%'; // Reset the cooldown bar width to 0%
-
-        // After cooldown, hide the bar smoothly after 3 seconds
-        setTimeout(() => {
-            cooldownContainer.style.display = 'none'; // Hide cooldown container
-        }, 500); // Add a small delay to allow the transition to complete
+        cooldownContainer.style.display = 'none';
     }, 3000); // 3 seconds cooldown
 }
+
+setTimeout(() => {
+  tutorial.style.display = "none";
+}, 5000); // 10 seconds
+
 
 // Event listener for keydown (Spacebar for shooting, other keys for jumping)
 document.addEventListener('keydown', function(event) {
@@ -104,7 +117,7 @@ document.addEventListener('keydown', function(event) {
 // Game loop (every 20ms)
 let gameInterval = setInterval(() => {
     if (!gameRunning) return;
-  
+   
     score.innerText++;
 
     const bilTop = parseInt(window.getComputedStyle(bil).getPropertyValue('top'));
@@ -146,7 +159,8 @@ let gameInterval = setInterval(() => {
 
         document.getElementById('final-score').innerText = `Din poäng: ${finalScore}`;
         document.getElementById('game-over-screen').style.display = 'flex';
-
+      
+        sten.style.animation = 'none';
         clearInterval(gameInterval); // ✅ Stop the loop!
     }
 

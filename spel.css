@@ -35,7 +35,7 @@ body {
     position: relative;
     top: 175px;
     left: 550px;
-    animation: sten 1s infinite linear;
+    animation: none; /* sten 1s infinite linear; */ 
     background-image: url('spelimage/lusis.png');
     background-size: contain; 
     background-repeat: no-repeat;
@@ -78,21 +78,36 @@ body {
 }
 
 #cooldown-container {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 100px;
-    height: 10px;
+    top: 350px;
+    left: 30%;
+    width: 150px;
+    height: 30px;
     background-color: #ddd;
     display: none;
-}
+    position: absolute;
+    border: #000 4px solid;
+    border-radius: 7px;
+  }
 
 #cooldown-bar {
     height: 100%;
-    background-color: #ff0000; /* Red color for the cooldown bar */
+    background-color: #ec4343; /* Red color for the cooldown bar */
     width: 100%; /* Starts full */
     transition: width 3s linear; /* Smoothly animate width */
+    z-index: 1;
+  }
+
+#laddarom {
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  bottom: 3px;
+  font-size: 1.5rem;
+  left: 30px;
 }
+
 #game-over-screen {
     position: fixed;
     top: 0;
@@ -116,12 +131,15 @@ body {
   }
 
   #leaderboard-box {
-    background: #222;
+    background: #5f5e5e;
     color: white;
     padding: 1rem;
     margin-top: 2rem;
     width: 300px;
     border-radius: 10px;
+    position: absolute;
+    top: 400px;
+    left: 80px;
   }
   
   #leaderboard-box h2 {
@@ -159,4 +177,20 @@ body {
     color: white;
     border-radius: 8px;
     cursor: pointer;
+  }
+
+  #tutorial {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0; 
+    padding: 0;
+    position: absolute;
+    top: 80px;
+    left: 230px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  #score {
+    position: absolute;
+    z-index: 2;
   }
