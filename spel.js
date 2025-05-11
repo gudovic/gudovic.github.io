@@ -41,7 +41,7 @@ document.getElementById("start-button").addEventListener("click", () => {
     document.getElementById("start-screen").style.display = "none";
     
     // Start sten animation
-    sten.style.animation = "sten 1s infinite linear";
+    sten.style.animation = "sten 1.8s infinite linear";
 });
 
 
@@ -51,6 +51,14 @@ const score = document.getElementById('score');
 const skott = document.getElementById('skott');
 const cooldownBar = document.getElementById('cooldown-bar');
 const cooldownContainer = document.getElementById('cooldown-container');
+
+// Hitbx tester
+// sten.classList.add("debug-hitbox");
+// bil.classList.add("debug-hitbox-player");
+
+
+
+
 
 let canShoot = true; // Flag to check if the player can shoot
 
@@ -114,11 +122,33 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
+let lastSpeedStep = 0;
+
+// Only run this ONCE
+sten.addEventListener('animationiteration', () => {
+  if (!gameRunning) return;
+
+  const currentScore = parseInt(score.innerText);
+  const speedStep = Math.floor(currentScore / 500); // every 100 points
+
+  if (speedStep > lastSpeedStep) {
+    lastSpeedStep = speedStep;
+
+    const newDuration = Math.max(0.5, 2 - speedStep * 0.1);
+    sten.style.animation = 'none';       // reset animation
+    sten.offsetHeight;                   // force reflow
+    sten.style.animation = `sten ${newDuration}s infinite linear`;
+
+    console.log(`Speed increased to ${newDuration}s at score ${currentScore}`);
+  }
+});
+
 // Game loop (every 20ms)
 let gameInterval = setInterval(() => {
     if (!gameRunning) return;
    
     score.innerText++;
+
 
     const bilTop = parseInt(window.getComputedStyle(bil).getPropertyValue('top'));
     const stenLeft = parseInt(window.getComputedStyle(sten).getPropertyValue('left'));
@@ -146,16 +176,16 @@ let gameInterval = setInterval(() => {
     if (isHit) {
         sten.style.animation = 'none';
         sten.offsetHeight; // Force browser to reset animation
-        sten.style.animation = 'sten 1s infinite linear';
+        sten.style.animation = 'sten 1.8s infinite linear';
     }
 
-    if (stenLeft < 80 && stenLeft > -30 && bilTop > 160) {
+    if (stenLeft < 60 && stenLeft > -10 && bilTop > 100) {
         console.log("Collision detected"); // ← debug log
 
         const finalScore = parseInt(score.innerText);
         document.getElementById('final-score').innerText = `Din poäng: ${finalScore}`;
         document.getElementById('game-over-screen').style.display = 'flex';
-        clearInterval(gameInterval);
+        clearInterval(gameInterval);  
 
         document.getElementById('final-score').innerText = `Din poäng: ${finalScore}`;
         document.getElementById('game-over-screen').style.display = 'flex';
@@ -165,7 +195,7 @@ let gameInterval = setInterval(() => {
     }
 
     // other game logic...
-}, 20);
+}, 15);
 
 
 document.addEventListener("DOMContentLoaded", () => {

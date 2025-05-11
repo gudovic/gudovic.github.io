@@ -34,8 +34,7 @@ body {
     width: 50px;
     position: relative;
     top: 175px;
-    left: 550px;
-    animation: none; /* sten 1s infinite linear; */ 
+    left: 550px;/* sten 1s infinite linear; */ 
     background-image: url('spelimage/lusis.png');
     background-size: contain; 
     background-repeat: no-repeat;
@@ -188,9 +187,19 @@ body {
     left: 230px;
     font-weight: bold;
     font-size: 20px;
+    white-space: nowrap;
   }
 
   #score {
     position: absolute;
     z-index: 2;
   }
+
+  /* hitbox test 
+  .debug-hitbox {
+  outline: 2px dashed red;
+}
+
+.debug-hitbox-player {
+  outline: 2px dashed lime;
+}*/
