@@ -82,7 +82,7 @@ const validCodes = {
     '192834': { userName: 'Katrin G', userGroup: 'group1'},
     '192840': { userName: 'Anders I', userGroup: 'group7'},
     '192846': { userName: 'Johanna F', userGroup: 'group4'},
-    '192851': { userName: 'Susanne J N', userGroup: 'group4'},
+    '192851': { userName: 'Susanne J N', userGroup: 'group2'},
 }
 
 const codeInput = document.getElementById('codeInput');
