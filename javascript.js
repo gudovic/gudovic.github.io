@@ -66,7 +66,7 @@ const validCodes = {
     '192254': { userName: 'Camilla S', userGroup: 'group2'},
     '192243': { userName: 'Hannah E', userGroup: 'group4'},
     '192345': { userName: 'Kerstin J', userGroup: 'group3'},
-    '192358': { userName: 'Christoffer B', userGroup: 'group7'},
+    '192358': { userName: 'Christopher B', userGroup: 'group7'},
     '192367': { userName: 'Ulrika S', userGroup: 'group1'},
     '192372': { userName: 'Linda N', userGroup: 'group1'},
     '192482': { userName: 'Olivia Y', userGroup: 'group6'},
@@ -81,6 +81,7 @@ const validCodes = {
     '192825': { userName: 'Elisabeth A', userGroup: 'group6'},
     '192834': { userName: 'Katrin G', userGroup: 'group1'},
     '192840': { userName: 'Anders I', userGroup: 'group7'},
+    '192846': { userName: 'Johanna F', userGroup: 'group4'},
 }
 
 const codeInput = document.getElementById('codeInput');
