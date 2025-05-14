@@ -19,7 +19,7 @@ body {
     width: 75px;
     position: relative;
     top: 225px;
-    background-image: url('spelimage/bil12.png');
+    background-image: url('spelimage/TEST.png');
     background-size: cover; 
     background-repeat: no-repeat;
     image-rendering: pixelated;
@@ -35,7 +35,7 @@ body {
     position: relative;
     top: 175px;
     left: 550px;/* sten 1s infinite linear; */ 
-    background-image: url('spelimage/lusis.png');
+    background-image: url('spelimage/Hjärta.png');
     background-size: contain; 
     background-repeat: no-repeat;
     image-rendering: pixelated;
