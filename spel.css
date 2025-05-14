@@ -35,7 +35,7 @@ body {
     position: relative;
     top: 175px;
     left: 550px;/* sten 1s infinite linear; */ 
-    background-image: url('spelimage/Hjärta.png');
+    background-image: url('spelimage/lusis.png');
     background-size: contain; 
     background-repeat: no-repeat;
     image-rendering: pixelated;
