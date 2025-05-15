@@ -123,8 +123,8 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
-skutt.addEventListener("click", jump)
-pang.addEventListener("click", skjut)
+skutt.addEventListener("touchstart", jump)
+pang.addEventListener("touchstart", skjut)
 
 let lastSpeedStep = 0;
 

@@ -227,12 +227,25 @@ body {
   font-size: 20px;
 }
 
+#tillgame {
+  border: #000000 3px solid;
+  background-color: #bbbbbb;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  border-radius: 30px;
+  padding: 20px;
+  color:#00376b;
+}
+
 @media (max-width: 768px) {
   .header {
-    flex-direction: column;
+    flex-direction:row;
     align-items: center;
     text-align: center;
     gap: 1rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
   .header a {
@@ -242,6 +255,7 @@ body {
 
   .logo {
     font-size: 1.5rem;
+    text-align: center;
   }
 
   .container {
@@ -249,6 +263,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
 
   #codeInput {
@@ -265,14 +280,4 @@ body {
     padding: 1rem;
     text-align: center;
   }
-}
-
-#tillgame {
-  border: #000000 3px solid;
-  background-color: #bbbbbb;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2rem;
-  border-radius: 30px;
-  padding: 20px;
-  color:#00376b;
 }

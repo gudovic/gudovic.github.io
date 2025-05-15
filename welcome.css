@@ -109,5 +109,9 @@ button {
 img {
   min-height: 80px;
 }
-  
-  
+
+@media (max-width:786px) {
+  .headerlogo {
+    padding: 0;
+  }
+}
