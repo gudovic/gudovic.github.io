@@ -10,3 +10,4 @@ Lärdomar
 4. Bilderna, gör mappar så det blir tydligt vad som hör till vad och slippa ha 20 bilder i projektet. 
 5. Gör färdigt innan man visar för allmänhet. Man själv kanske tycker det är jättecoolt att ha gjort ett halvtrasigt spel och en sida med ful design, men en vanlig person ser bara en trasig sida. Man får bara en chans till ett första intryck.
 
+Idéer -> sätt halva spelplanen var som knappar 
