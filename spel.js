@@ -94,6 +94,7 @@ requestAnimationFrame(() => {
 });
 
 
+
     // After 0.5 seconds (shot animation), reset the shot and hide it
     setTimeout(() => {
         skott.classList.remove('skjut');
@@ -121,6 +122,9 @@ document.addEventListener('keydown', function(event) {
         jump(); // Handle jumping
     }
 });
+
+skutt.addEventListener("click", jump)
+pang.addEventListener("click", skjut)
 
 let lastSpeedStep = 0;
 
