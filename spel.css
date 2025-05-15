@@ -228,11 +228,11 @@ body {
 } */
 
 #mobileCont {
-  width: 120px;
-  height: 50px;
-  border: black 3px solid;
+  width: 180px;
+  height: 70px;
   position: absolute;
   top: 340px;
+  display: none;
 }
 
 @media (max-width: 786px) {
@@ -241,4 +241,15 @@ body {
     display: none;
   }
 
+}
+
+@media (max-width: 786px) {
+    #mobileCont {
+      display: block;
+    }
+}
+
+#skutt, #pang {
+  height: 40px;
+  width: 80px;
 }
