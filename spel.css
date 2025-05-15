@@ -238,14 +238,17 @@ body {
 #skutt, #pang {
   height: 80px;
   width: 120px;
+  touch-action: manipulation;
+  font-size: 1.5rem;
+
 }
 
 @media (max-width: 786px) {
   #game-info1, 
-  #game-info2 {
+  #game-info2,
+  #tutorial {
     display: none;
   }
-
 }
 
 @media (max-width: 786px) {
@@ -258,4 +261,15 @@ body {
     #cooldown-container {
       top: 90px;
     }
+}
+@media (max-width: 786px) {
+    #vinnare {
+      top: 850px;
+    }
+}
+@media (max-width: 786px) {
+   #leaderboard-box 
+ {
+      left: 20px;
+ }
 }
