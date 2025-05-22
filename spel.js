@@ -1,10 +1,14 @@
-const app = firebase.initializeApp(firebaseConfig);
-const db = firebase.database(app);
-const scoresRef = firebase.database().ref("scores");
+firebase.initializeApp(firebaseConfig);
+
+const db = firebase.database();
+const scoresRef = db.ref("scores");
 
 function submitScore(name, score) {
-  push(scoresRef, { name, score });
+  scoresRef.push({ name, score });
 }
+
+// (rest of your spel.js code stays the same)
+
 
 let gameRunning = false;
 
