@@ -1,16 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
 import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyAbpqrS7En7shMkdfHHtW6bOPQsN6Iq2yY",
-  authDomain: "lf-airlines.firebaseapp.com",
-  databaseURL: "https://lf-airlines-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "lf-airlines",
-  storageBucket: "lf-airlines.appspot.com",
-  messagingSenderId: "719527670719",
-  appId: "1:719527670719:web:a3cdc391b0858a8a72a70a"
-};
-
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 const scoresRef = ref(db, "scores");
