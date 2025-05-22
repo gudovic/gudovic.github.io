@@ -1,9 +1,6 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
-
-const app = initializeApp(firebaseConfig);
-const db = getDatabase(app);
-const scoresRef = ref(db, "scores");
+const app = firebase.initializeApp(firebaseConfig);
+const db = firebase.database(app);
+const scoresRef = firebase.database().ref("scores");
 
 function submitScore(name, score) {
   push(scoresRef, { name, score });
