@@ -13,7 +13,7 @@ function submitScore(name, score) {
 let gameRunning = false;
 
 // TESTA HÄÄÄÄRR
-onValue(scoresRef, (snapshot) => {
+scoresRef.on("value", (snapshot) => {
     const data = snapshot.val();
     const sorted = Object.values(data || {}).sort((a, b) => b.score - a.score).slice(0, 10);
   
