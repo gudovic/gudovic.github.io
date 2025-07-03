@@ -1,4 +1,4 @@
-firebase.initializeApp(firebaseConfig);
+/* firebase.initializeApp(firebaseConfig);
 
 const db = firebase.database();
 const scoresRef = db.ref("scores");
@@ -25,7 +25,7 @@ scoresRef.on("value", (snapshot) => {
       li.textContent = `${entry.name}: ${entry.score}`;
       leaderboard.appendChild(li);
     });
-  });
+  }); */
 //AHSJDSDKFDG 
 document.getElementById("start-button").addEventListener("click", () => {
     gameRunning = true;
