@@ -11,6 +11,6 @@ Lärdomar
 3. Hur många sidor kommer behövas, vilka färger, vilka teman, vilka element ska vara lika. Strukturera och skriv så koden blir användbar i övriga projektet. Lista ut vad som är gemensamt för allt och vad som är mer specifikt. 
 4. Bilderna, gör mappar så det blir tydligt vad som hör till vad och slippa ha 20 bilder i projektet. 
 5. Gör färdigt innan man visar för allmänhet. Man själv kanske tycker det är jättecoolt att ha gjort ett halvtrasigt spel och en sida med ful design, men en vanlig person ser bara en trasig sida. Man får bara en chans till ett första intryck.
-6. test
+6. testt
 
 Idéer -> sätt halva spelplanen var som knappar 
